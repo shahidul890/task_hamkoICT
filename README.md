@@ -22,6 +22,17 @@ cp .env.example .env
 php artisan key:generate
 ```
 
+-   input database configeration at .env
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_db_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
 -   Run migration for database
 
 ```
