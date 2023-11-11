@@ -37,5 +37,7 @@ php artisan serve
 -   Run node package
 
 ```
+npm install
+
 npm run dev
 ```
