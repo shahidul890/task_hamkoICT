@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
-    use OpenAI;
-
+    
     public function __construct()
     {
         $this->middleware("auth");
@@ -24,6 +23,17 @@ class HomeController extends Controller
      */
     public function home()
     {
-        // $this->openChat();
+        return view("home");
+    }
+
+
+    /**
+     * -------------------------------------------------
+     *  Show auth profile data
+     * -------------------------------------------------
+     */
+    public function profile()
+    {
+        return auth()->user();
     }
 }

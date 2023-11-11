@@ -4,9 +4,9 @@ namespace App\Traits;
 
 trait OpenAI
 {
-    protected $OPENAI_TOKEN;
+    protected $OPENAI_TOKEN = "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";
 
-    protected $OPENAI_API;
+    protected $OPENAI_API = "https://api.openai.com/v1/chat/completions";
 
     
     public function __construct() 
@@ -40,7 +40,7 @@ trait OpenAI
      * 
      * @return array
      */
-    protected function headers(): array
+    protected function headers()
     {
         return  [
             "Content-Type:application/json",
@@ -57,7 +57,7 @@ trait OpenAI
      * @param string $message
      * @return array
      */
-    protected function postFields(string $message): array
+    protected function postFields(string $message)
     {
         return  [
             "model" => "gpt-3.5-turbo",
@@ -80,7 +80,7 @@ trait OpenAI
      * @param array $headers
      * @return array
      */
-    protected function sendHttp(array $postFields, array $headers): array
+    protected function sendHttp(array $postFields, array $headers)
     {
         ini_set('max_execution_time', 1200);
 

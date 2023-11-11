@@ -33,3 +33,9 @@ php artisan migrate
 ```
 php artisan serve
 ```
+
+-   Run node package
+
+```
+npm run dev
+```
